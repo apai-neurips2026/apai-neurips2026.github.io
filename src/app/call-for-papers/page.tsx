@@ -10,10 +10,6 @@ export default function CallForPapersPage() {
     <div className="site-container py-12 md:py-16">
       <header className="mb-12">
         <h1 className="text-display-md text-neutral-900 mb-3">Call for Papers</h1>
-        <p className="text-base text-neutral-700 leading-relaxed">
-          We invite submissions to {workshop.shortName}, on authenticity,
-          provenance, and authorized use of generative AI.
-        </p>
       </header>
 
       {/* OpenReview button */}
