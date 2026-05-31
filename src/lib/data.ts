@@ -100,6 +100,7 @@ export const organizers: Person[] = [
     name: 'Michael Davinroy',
     affiliation: 'Aptima Inc.',
     bio: 'Researcher at Aptima Inc., bringing a test-and-evaluation perspective to authenticity and provenance.',
+    photo: '/images/davinroy.jpg',
   },
   {
     name: 'Matthew Stamm',
