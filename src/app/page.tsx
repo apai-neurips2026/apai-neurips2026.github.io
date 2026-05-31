@@ -34,7 +34,6 @@ export default function HomePage() {
             {workshop.date}
           </span>
         </div>
-        <p className="text-xs font-ui text-neutral-400">{workshop.venueNote}</p>
       </section>
 
       {/* Abstract */}

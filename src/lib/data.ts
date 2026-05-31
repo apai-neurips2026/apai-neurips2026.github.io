@@ -11,7 +11,6 @@ export const workshop = {
   // Placeholders — update once NeurIPS 2026 confirms the program.
   location: 'NeurIPS 2026 — Location TBA',
   date: 'December 2026 — Date & Time TBA',
-  venueNote: 'In-person, one-day workshop · Co-located with NeurIPS 2026',
   tagline:
     'Beyond real-vs-fake: a NeurIPS workshop on authenticity, provenance, and authorized use of generative AI — spanning avatar fingerprinting, watermarks, and model attribution.',
   openReviewUrl: '#', // Not live yet.
