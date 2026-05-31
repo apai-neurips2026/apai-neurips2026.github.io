@@ -43,6 +43,7 @@ export interface Person {
   role?: string;
   bio?: string;
   confirmed?: boolean;
+  photo?: string;
 }
 
 export const keynoteSpeakers: Person[] = [
@@ -52,6 +53,7 @@ export const keynoteSpeakers: Person[] = [
     role: 'Keynote',
     bio: 'Professor at the School of Information and EECS, UC Berkeley; Co-founder & CSO at GetReal Security. A leading voice in digital forensics and image analysis. Confirmed for keynote and panel.',
     confirmed: true,
+    photo: '/images/farid.jpg',
   },
   {
     name: 'Keynote Speaker 2',
@@ -74,21 +76,25 @@ export const organizers: Person[] = [
     name: 'Shruti Agarwal',
     affiliation: 'Adobe',
     bio: 'Research Scientist on the AI for Content Authenticity team at Adobe; PhD with Prof. Hany Farid (UC Berkeley), postdoc with Prof. William Freeman (MIT CSAIL). Lead author on TrustMark and ProMark; General Chair, ACM IH&MMSec 2025.',
+    photo: '/images/agarwal.jpg',
   },
   {
     name: 'Ekta Prashnani',
     affiliation: 'NVIDIA',
     bio: 'Sr. Research Scientist at NVIDIA Research; lead author of the pioneering avatar fingerprinting work at ECCV 2024 and co-author on the puppeteering-defense paper at NeurIPS 2025.',
+    photo: '/images/prashnani.jpg',
   },
   {
     name: 'Maty Bohacek',
     affiliation: 'Stanford University',
     bio: 'Student researcher at Stanford and Google DeepMind, advised by Prof. Maneesh Agrawala. Lead author on Human Action CLIPs and the DeepSpeak dataset; co-organizer of APAI at ICCV 2025 and CVPR 2026.',
+    photo: '/images/bohacek.jpg',
   },
   {
     name: 'Sarah Barrington',
     affiliation: 'UC Berkeley',
     bio: 'PhD candidate in Prof. Hany Farid’s digital-forensics lab. Lead author on the Nature Scientific Reports study on AI-cloned voices and co-creator of the DeepSpeak deepfake dataset.',
+    photo: '/images/barrington.jpg',
   },
   {
     name: 'Michael Davinroy',
@@ -99,16 +105,19 @@ export const organizers: Person[] = [
     name: 'Matthew Stamm',
     affiliation: 'Drexel University',
     bio: 'Associate Professor; director of the Multimedia and Information Security Lab (MISL). Developed the constrained-CNN family of forensic detectors and the VideoFACT line of video-forgery detectors.',
+    photo: '/images/stamm.jpg',
   },
   {
     name: 'David Luebke',
     affiliation: 'NVIDIA',
     bio: 'VP, Graphics Research at NVIDIA Research. Co-author on the original avatar fingerprinting paper, bringing deep ties to the rendering and generation side of the problem.',
+    photo: '/images/luebke.jpg',
   },
   {
     name: 'Jill Crisman',
     affiliation: 'UL Research Institutes',
     bio: 'Executive Director at UL Research Institutes, bringing standards and applied-research expertise to the organizing team.',
+    photo: '/images/crisman.jpg',
   },
 ];
 
