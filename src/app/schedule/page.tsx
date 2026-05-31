@@ -11,10 +11,6 @@ export default function SchedulePage() {
     <div className="site-container py-12 md:py-16">
       <header className="mb-12">
         <h1 className="text-display-md text-neutral-900 mb-3">Schedule</h1>
-        <p className="text-base text-neutral-700 leading-relaxed">
-          A tentative one-day program. Talk titles and accepted-paper titles
-          will be posted here ahead of the event.
-        </p>
       </header>
 
       {/* Schedule */}
