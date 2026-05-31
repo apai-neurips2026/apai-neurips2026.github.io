@@ -9,6 +9,7 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
+        // Green primary - kept from original
         primary: {
           50: '#f0fdf4',
           100: '#dcfce7',
@@ -22,6 +23,7 @@ const config: Config = {
           900: '#14532d',
           950: '#052e16',
         },
+        // Accent colors
         accent: {
           red: '#ef4444',
           orange: '#f97316',
@@ -30,6 +32,7 @@ const config: Config = {
           pink: '#ec4899',
           purple: '#8b5cf6',
         },
+        // Softer neutral tones
         neutral: {
           50: '#fafafa',
           100: '#f5f5f5',
@@ -60,6 +63,11 @@ const config: Config = {
         '18': '4.5rem',
         '88': '22rem',
         '128': '32rem',
+      },
+      gridTemplateColumns: {
+        'auto-fit-sm': 'repeat(auto-fit, minmax(200px, 1fr))',
+        'auto-fit-md': 'repeat(auto-fit, minmax(280px, 1fr))',
+        'auto-fit-lg': 'repeat(auto-fit, minmax(350px, 1fr))',
       },
     },
   },

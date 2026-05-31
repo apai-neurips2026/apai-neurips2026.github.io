@@ -14,11 +14,6 @@ concurrency:
   group: "pages"
   cancel-in-progress: false
 
-# Source of the Charter font + icon binaries (pinned to an immutable commit
-# of the design-source personal site so the assets always resolve).
-env:
-  ASSET_BASE: "https://raw.githubusercontent.com/maty-bohacek/maty-bohacek.github.io/e66b5d932522eefb3c227c7c1e43836ad72a253d"
-
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -30,21 +25,13 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: "20"
+          cache: "npm"
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
 
-      - name: Fetch binary assets (fonts + icons)
-        run: |
-          mkdir -p public/fonts/Charter
-          for f in charter_regular charter_bold charter_italic charter_bold_italic; do
-            curl -fsSL "$ASSET_BASE/public/fonts/Charter/$f.woff2" -o "public/fonts/Charter/$f.woff2"
-          done
-          curl -fsSL "$ASSET_BASE/public/favicon.png" -o public/favicon.png || true
-          curl -fsSL "$ASSET_BASE/public/apple-icon.png" -o public/apple-icon.png || true
-
       - name: Install dependencies
-        run: npm install
+        run: npm ci
 
       - name: Build
         run: npm run build

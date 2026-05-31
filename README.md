@@ -36,8 +36,8 @@ schedule, and the call for papers. Update that file to change the site.
 - `/schedule` — program, keynote speakers, accepted papers
 - `/committee` — organizing committee and program committee
 
-## Binary assets
+## Assets
 
-The Charter font files and icons are not committed here; the deploy workflow
-fetches them at build time from the design-source repository (pinned to an
-immutable commit). See the `Fetch binary assets` step in the deploy workflow.
+The Charter font files (`public/fonts/Charter/`) and icons (`public/`) are
+committed directly to this repository. The site has no external build-time
+dependencies beyond the npm packages in `package.json`.
