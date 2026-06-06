@@ -43,6 +43,9 @@ export interface Person {
   role?: string;
   bio?: string;
   confirmed?: boolean;
+  // Free-form status label (e.g. "Pending Location"); overrides the
+  // default confirmed/TBA badge when set.
+  status?: string;
   photo?: string;
 }
 
@@ -51,23 +54,56 @@ export const keynoteSpeakers: Person[] = [
     name: 'Hany Farid',
     affiliation: 'UC Berkeley · GetReal Security',
     role: 'Keynote',
-    bio: 'Professor at the School of Information and EECS, UC Berkeley; Co-founder & CSO at GetReal Security. A leading voice in digital forensics and image analysis. Confirmed for keynote and panel.',
+    bio: 'Professor at the School of Information and EECS, UC Berkeley, and Co-founder & CSO at GetReal Security. A pioneer of scalable media forensics.',
     confirmed: true,
     photo: '/images/farid.jpg',
   },
   {
-    name: 'Keynote Speaker 2',
-    affiliation: 'To be announced',
+    name: 'Nicholas Carlini',
+    affiliation: 'Anthropic',
     role: 'Keynote',
-    bio: 'A second keynote speaker is being confirmed. Speaker titles will be posted here ahead of the program.',
-    confirmed: false,
+    bio: 'Researcher at Anthropic working on adversarial robustness and model red-teaming.',
+    status: 'Pending Location',
   },
   {
-    name: 'Keynote Speaker 3',
-    affiliation: 'To be announced',
+    name: 'Chris Bregler',
+    affiliation: 'Google DeepMind',
     role: 'Keynote',
-    bio: 'A third keynote speaker is being confirmed. Speaker titles will be posted here ahead of the program.',
-    confirmed: false,
+    bio: 'Researcher at Google DeepMind working on generative video and deep synthesis.',
+    confirmed: true,
+  },
+  {
+    name: 'Alex Engler',
+    affiliation: 'University of Pennsylvania',
+    role: 'Keynote',
+    bio: 'Executive Director of the Center on Media, Technology and Democracy at Penn, and former Senior Policy Advisor at the White House OSTP. Works on AI governance and algorithmic accountability.',
+    confirmed: true,
+  },
+  {
+    name: 'Shawn Shan',
+    affiliation: 'Dartmouth',
+    role: 'Keynote',
+    bio: 'Professor at Dartmouth working on creator protection against generative mimicry.',
+    confirmed: true,
+  },
+];
+
+// Additional panelists joining the workshop panel alongside the keynote speakers.
+export const panelists: Person[] = [
+  {
+    name: 'Luisa Verdoliva',
+    affiliation: 'University Federico II of Naples',
+    role: 'Panelist',
+    bio: 'Professor at the University Federico II of Naples, focused on benchmarking synthetic-media forensics methods.',
+    status: 'Pending Location',
+  },
+  {
+    name: 'David Luebke',
+    affiliation: 'NVIDIA',
+    role: 'Moderator',
+    bio: 'VP of Graphics Research at NVIDIA, working on graphics research and avatar authentication.',
+    confirmed: true,
+    photo: '/images/luebke.jpg',
   },
 ];
 

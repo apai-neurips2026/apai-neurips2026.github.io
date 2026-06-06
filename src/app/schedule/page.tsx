@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import PersonCard from '@/components/PersonCard';
-import { schedule, keynoteSpeakers } from '@/lib/data';
+import { schedule, keynoteSpeakers, panelists } from '@/lib/data';
 
 export const metadata: Metadata = {
   title: 'Schedule',
@@ -55,6 +55,18 @@ export default function SchedulePage() {
         <div className="grid grid-cols-1 gap-4">
           {keynoteSpeakers.map((speaker) => (
             <PersonCard key={speaker.name} person={speaker} />
+          ))}
+        </div>
+      </section>
+
+      {/* Additional Panelists */}
+      <section className="mb-16">
+        <h2 className="text-sm font-bold text-neutral-900 uppercase tracking-wide mb-6">
+          Additional Panelists
+        </h2>
+        <div className="grid grid-cols-1 gap-4">
+          {panelists.map((panelist) => (
+            <PersonCard key={panelist.name} person={panelist} />
           ))}
         </div>
       </section>

@@ -69,7 +69,11 @@ export default function HomePage() {
               <Avatar name={speaker.name} src={speaker.photo} size={96} className="rounded-full" />
               <h3 className="font-bold text-neutral-900 mt-3">{speaker.name}</h3>
               <p className="text-sm text-neutral-500">{speaker.affiliation}</p>
-              {speaker.confirmed ? (
+              {speaker.status ? (
+                <span className="font-ui text-[0.625rem] font-semibold uppercase tracking-wide text-neutral-400 mt-1">
+                  {speaker.status}
+                </span>
+              ) : speaker.confirmed ? (
                 <span className="font-ui text-[0.625rem] font-semibold uppercase tracking-wide text-primary-700 mt-1">
                   Confirmed
                 </span>

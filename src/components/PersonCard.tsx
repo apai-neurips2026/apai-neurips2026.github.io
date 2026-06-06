@@ -18,10 +18,16 @@ export default function PersonCard({ person, showBio = true }: PersonCardProps) 
               {person.role}
             </span>
           )}
-          {person.confirmed === false && (
+          {person.status ? (
             <span className="font-ui text-[0.625rem] font-semibold uppercase tracking-wide bg-neutral-100 text-neutral-500 px-2 py-0.5 leading-none">
-              TBA
+              {person.status}
             </span>
+          ) : (
+            person.confirmed === false && (
+              <span className="font-ui text-[0.625rem] font-semibold uppercase tracking-wide bg-neutral-100 text-neutral-500 px-2 py-0.5 leading-none">
+                TBA
+              </span>
+            )
           )}
         </div>
         <p className="text-sm text-neutral-500 mt-0.5">{person.affiliation}</p>
