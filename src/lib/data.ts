@@ -128,6 +128,7 @@ export const programCommittee = {
   description:
     'We are assembling a Program Committee of approximately 40 reviewers drawn from (i) the Content Authenticity Initiative and C2PA technical working groups; (ii) authors of recent provenance-and-attribution papers at NeurIPS, CVPR, ICCV, and ICLR; and (iii) prior reviewer pools from APAI at ICCV 2025 and CVPR 2026. No reviewer will be assigned more than 3 papers.',
   note: 'Additional reviewers will be listed here as invitations are confirmed.',
+  nominateUrl: 'https://forms.gle/9PP5YMHho8JA8zPm9',
   members: [
     {
       name: 'Naresh Kumar Devulapally',
