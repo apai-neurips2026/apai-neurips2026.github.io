@@ -213,36 +213,54 @@ export interface ScheduleItem {
 export const schedule: ScheduleItem[] = [
   { time: '08:30 – 08:40', title: 'Opening remarks and framing' },
   {
-    time: '08:40 – 09:30',
+    time: '08:40 – 09:20',
     title: 'Keynote: Prof. Hany Farid',
     detail: 'UC Berkeley / GetReal Security (confirmed)',
   },
   {
-    time: '09:30 – 10:15',
+    time: '09:20 – 09:55',
+    title: 'Keynote: Dr. Chris Bregler',
+    detail: 'Google DeepMind (confirmed)',
+  },
+  { time: '09:55 – 10:25', title: 'Coffee break and poster set-up' },
+  {
+    time: '10:25 – 11:00',
+    title: 'Keynote: Prof. Shawn Shan',
+    detail: 'Dartmouth (confirmed)',
+  },
+  {
+    time: '11:00 – 11:45',
     title: 'Spotlight Paper Session I',
     detail: '3 talks, 15 min each',
   },
-  { time: '10:15 – 10:45', title: 'Coffee break and poster set-up' },
-  { time: '10:45 – 11:35', title: 'Keynote 2', tba: true },
-  { time: '11:35 – 12:20', title: 'Fast-forward talks for poster authors' },
+  { time: '11:45 – 12:15', title: 'Fast-forward talks for poster authors' },
   {
-    time: '12:20 – 13:30',
+    time: '12:15 – 13:30',
     title: 'Working lunch and poster session',
     detail: 'Sponsored (to be confirmed)',
   },
-  { time: '13:30 – 14:20', title: 'Keynote 3', tba: true },
   {
-    time: '14:20 – 15:00',
+    time: '13:30 – 14:05',
+    title: 'Keynote: Dr. Nicholas Carlini',
+    detail: 'Anthropic (confirmed — pending location logistics)',
+  },
+  {
+    time: '14:05 – 14:40',
+    title: 'Keynote: Dr. Alex Engler',
+    detail: 'University of Pennsylvania (confirmed)',
+  },
+  {
+    time: '14:40 – 15:25',
     title: 'Spotlight Paper Session II',
     detail: '3 talks',
   },
-  { time: '15:00 – 15:30', title: 'Coffee break' },
+  { time: '15:25 – 15:50', title: 'Coffee break' },
   {
-    time: '15:30 – 16:30',
+    time: '15:50 – 16:50',
     title: 'Panel discussion',
     detail: 'Keynote speakers join the panel',
   },
-  { time: '16:30 – 16:40', title: 'Closing remarks and best-paper announcement' },
+  { time: '16:50 – 17:00', title: 'Closing remarks and best-paper announcement' },
 ];
 
 export const cfp = {
