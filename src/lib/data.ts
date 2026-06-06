@@ -122,11 +122,48 @@ export const organizers: Person[] = [
   },
 ];
 
-// Program Committee is being assembled; names listed once invitations confirm.
+// Program Committee — named reviewers below; the organizing committee also
+// serves on the panel. Additional members are added as invitations confirm.
 export const programCommittee = {
   description:
     'We are assembling a Program Committee of approximately 40 reviewers drawn from (i) the Content Authenticity Initiative and C2PA technical working groups; (ii) authors of recent provenance-and-attribution papers at NeurIPS, CVPR, ICCV, and ICLR; and (iii) prior reviewer pools from APAI at ICCV 2025 and CVPR 2026. No reviewer will be assigned more than 3 papers.',
-  note: 'The named Program Committee will be listed here once invitations are confirmed.',
+  note: 'Additional reviewers will be listed here as invitations are confirmed.',
+  members: [
+    {
+      name: 'Naresh Kumar Devulapally',
+      affiliation: 'The State University of New York at Buffalo',
+    },
+    { name: 'Janos Horvath', affiliation: 'Visionary Tech & Event Solutions' },
+    { name: 'Ziyue Xiang', affiliation: 'Purdue University' },
+    { name: 'Mehrdad Saberi', affiliation: 'University of Maryland' },
+    {
+      name: 'Koushik Srivatsan Murali',
+      affiliation: 'Adobe / Johns Hopkins University',
+    },
+    {
+      name: 'Christian Riess',
+      affiliation:
+        'Friedrich-Alexander University Erlangen-Nürnberg, Germany',
+    },
+    { name: 'Davide Cozzolino', affiliation: 'University of Naples Federico II' },
+    { name: 'Roberto Caldelli', affiliation: 'CNIT and Universitas Mercatorum' },
+    { name: 'Benedikt Lorch', affiliation: 'GetReal Security' },
+    {
+      name: 'Chandrakanth Gudavalli',
+      affiliation: 'University of California Santa Barbara',
+    },
+    { name: 'Seonwook Park', affiliation: 'NVIDIA' },
+    { name: 'Amrita Mazumdar', affiliation: 'NVIDIA' },
+    { name: 'Gautham Koorma', affiliation: 'Quandary Peak Research' },
+    { name: 'Arun George Zachariah', affiliation: 'NVIDIA' },
+    {
+      name: 'Gianni Poggi',
+      affiliation: 'Università Federico II di Napoli, Italy',
+    },
+    { name: 'Qiuyu Tang', affiliation: 'Lehigh University' },
+    { name: 'Candice Gerstner', affiliation: 'U.S. Department of Defense' },
+    { name: 'Davide Salvi', affiliation: '' },
+  ] as Person[],
 };
 
 export interface ScheduleItem {
