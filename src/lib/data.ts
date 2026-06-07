@@ -59,20 +59,6 @@ export const keynoteSpeakers: Person[] = [
     photo: '/images/farid.jpg',
   },
   {
-    name: 'Nicholas Carlini',
-    affiliation: 'Anthropic',
-    role: 'Keynote',
-    bio: 'Researcher at Anthropic working on adversarial robustness and model red-teaming.',
-    status: 'Pending Location',
-  },
-  {
-    name: 'Chris Bregler',
-    affiliation: 'Google DeepMind',
-    role: 'Keynote',
-    bio: 'Researcher at Google DeepMind working on generative video and deep synthesis.',
-    confirmed: true,
-  },
-  {
     name: 'Alex Engler',
     affiliation: 'University of Pennsylvania',
     role: 'Keynote',
@@ -88,8 +74,23 @@ export const keynoteSpeakers: Person[] = [
   },
 ];
 
-// Additional panelists joining the workshop panel alongside the keynote speakers.
+// Panel: the keynote speakers join the panel, alongside these additional
+// panelists and the moderator.
 export const panelists: Person[] = [
+  {
+    name: 'Nicholas Carlini',
+    affiliation: 'Anthropic',
+    role: 'Panelist',
+    bio: 'Researcher at Anthropic working on adversarial robustness and model red-teaming.',
+    status: 'Pending Location Logistics',
+  },
+  {
+    name: 'Chris Bregler',
+    affiliation: 'Google DeepMind',
+    role: 'Panelist',
+    bio: 'Researcher at Google DeepMind working on generative video and deep synthesis.',
+    confirmed: true,
+  },
   {
     name: 'Luisa Verdoliva',
     affiliation: 'University Federico II of Naples',
@@ -213,54 +214,44 @@ export interface ScheduleItem {
 export const schedule: ScheduleItem[] = [
   { time: '08:30 – 08:40', title: 'Opening remarks and framing' },
   {
-    time: '08:40 – 09:20',
+    time: '08:40 – 09:30',
     title: 'Keynote: Prof. Hany Farid',
     detail: 'UC Berkeley / GetReal Security (confirmed)',
   },
   {
-    time: '09:20 – 09:55',
-    title: 'Keynote: Dr. Chris Bregler',
-    detail: 'Google DeepMind (confirmed)',
-  },
-  { time: '09:55 – 10:25', title: 'Coffee break and poster set-up' },
-  {
-    time: '10:25 – 11:00',
-    title: 'Keynote: Prof. Shawn Shan',
-    detail: 'Dartmouth (confirmed)',
-  },
-  {
-    time: '11:00 – 11:45',
+    time: '09:30 – 10:15',
     title: 'Spotlight Paper Session I',
     detail: '3 talks, 15 min each',
   },
-  { time: '11:45 – 12:15', title: 'Fast-forward talks for poster authors' },
+  { time: '10:15 – 10:45', title: 'Coffee break and poster set-up' },
   {
-    time: '12:15 – 13:30',
+    time: '10:45 – 11:35',
+    title: 'Keynote: Alex Engler',
+    detail: 'University of Pennsylvania (confirmed)',
+  },
+  { time: '11:35 – 12:20', title: 'Fast-forward talks for poster authors' },
+  {
+    time: '12:20 – 13:30',
     title: 'Working lunch and poster session',
     detail: 'Sponsored (to be confirmed)',
   },
   {
-    time: '13:30 – 14:05',
-    title: 'Keynote: Dr. Nicholas Carlini',
-    detail: 'Anthropic (confirmed — pending location logistics)',
+    time: '13:30 – 14:20',
+    title: 'Keynote: Prof. Shawn Shan',
+    detail: 'Dartmouth (confirmed)',
   },
   {
-    time: '14:05 – 14:40',
-    title: 'Keynote: Dr. Alex Engler',
-    detail: 'University of Pennsylvania (confirmed)',
-  },
-  {
-    time: '14:40 – 15:25',
+    time: '14:20 – 15:00',
     title: 'Spotlight Paper Session II',
     detail: '3 talks',
   },
-  { time: '15:25 – 15:50', title: 'Coffee break' },
+  { time: '15:00 – 15:30', title: 'Coffee break' },
   {
-    time: '15:50 – 16:50',
+    time: '15:30 – 16:30',
     title: 'Panel discussion',
     detail: 'Keynote speakers join the panel',
   },
-  { time: '16:50 – 17:00', title: 'Closing remarks and best-paper announcement' },
+  { time: '16:30 – 16:40', title: 'Closing remarks and best-paper announcement' },
 ];
 
 export const cfp = {
