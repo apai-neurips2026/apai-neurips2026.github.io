@@ -43,6 +43,9 @@ export interface Person {
   role?: string;
   bio?: string;
   confirmed?: boolean;
+  // Free-form status label (e.g. "Pending Location"); overrides the
+  // default confirmed/TBA badge when set.
+  status?: string;
   photo?: string;
 }
 
@@ -51,23 +54,58 @@ export const keynoteSpeakers: Person[] = [
     name: 'Hany Farid',
     affiliation: 'UC Berkeley · GetReal Security',
     role: 'Keynote',
-    bio: 'Professor at the School of Information and EECS, UC Berkeley; Co-founder & CSO at GetReal Security. A leading voice in digital forensics and image analysis. Confirmed for keynote and panel.',
+    bio: 'Professor at the School of Information and EECS, UC Berkeley, and Co-founder & CSO at GetReal Security. A pioneer of scalable media forensics.',
     confirmed: true,
     photo: '/images/farid.jpg',
   },
   {
-    name: 'Keynote Speaker 2',
-    affiliation: 'To be announced',
+    name: 'Alex Engler',
+    affiliation: 'Penn Center on Media, Technology, and Democracy',
     role: 'Keynote',
-    bio: 'A second keynote speaker is being confirmed. Speaker titles will be posted here ahead of the program.',
-    confirmed: false,
+    bio: 'Executive Director of the Penn Center on Media, Technology, and Democracy, and former Senior Policy Advisor at the White House OSTP. Works on AI governance and algorithmic accountability.',
+    confirmed: true,
   },
   {
-    name: 'Keynote Speaker 3',
-    affiliation: 'To be announced',
+    name: 'Shawn Shan',
+    affiliation: 'Dartmouth',
     role: 'Keynote',
-    bio: 'A third keynote speaker is being confirmed. Speaker titles will be posted here ahead of the program.',
-    confirmed: false,
+    bio: 'Professor at Dartmouth working on creator protection against generative mimicry.',
+    confirmed: true,
+  },
+];
+
+// Panel: the keynote speakers join the panel, alongside these additional
+// panelists and the moderator.
+export const panelists: Person[] = [
+  {
+    name: 'Nicholas Carlini',
+    affiliation: 'Anthropic',
+    role: 'Panelist',
+    bio: 'Researcher at Anthropic working on adversarial robustness and model red-teaming.',
+    status: 'Tentative',
+  },
+  {
+    name: 'Chris Bregler',
+    affiliation: 'Google DeepMind',
+    role: 'Panelist',
+    bio: 'Researcher at Google DeepMind working on generative video and deep synthesis.',
+    confirmed: true,
+    status: 'Pending Location',
+  },
+  {
+    name: 'Luisa Verdoliva',
+    affiliation: 'University Federico II of Naples',
+    role: 'Panelist',
+    bio: 'Professor at the University Federico II of Naples, focused on benchmarking synthetic-media forensics methods.',
+    status: 'Pending Location',
+  },
+  {
+    name: 'David Luebke',
+    affiliation: 'NVIDIA',
+    role: 'Moderator',
+    bio: 'VP of Graphics Research at NVIDIA, working on graphics research and avatar authentication.',
+    confirmed: true,
+    photo: '/images/luebke.jpg',
   },
 ];
 
@@ -122,11 +160,49 @@ export const organizers: Person[] = [
   },
 ];
 
-// Program Committee is being assembled; names listed once invitations confirm.
+// Program Committee — named reviewers below; the organizing committee also
+// serves on the panel. Additional members are added as invitations confirm.
 export const programCommittee = {
   description:
     'We are assembling a Program Committee of approximately 40 reviewers drawn from (i) the Content Authenticity Initiative and C2PA technical working groups; (ii) authors of recent provenance-and-attribution papers at NeurIPS, CVPR, ICCV, and ICLR; and (iii) prior reviewer pools from APAI at ICCV 2025 and CVPR 2026. No reviewer will be assigned more than 3 papers.',
-  note: 'The named Program Committee will be listed here once invitations are confirmed.',
+  note: 'Additional reviewers will be listed here as invitations are confirmed.',
+  nominateUrl: 'https://forms.gle/9PP5YMHho8JA8zPm9',
+  members: [
+    {
+      name: 'Naresh Kumar Devulapally',
+      affiliation: 'The State University of New York at Buffalo',
+    },
+    { name: 'Janos Horvath', affiliation: 'Visionary Tech & Event Solutions' },
+    { name: 'Ziyue Xiang', affiliation: 'Purdue University' },
+    { name: 'Mehrdad Saberi', affiliation: 'University of Maryland' },
+    {
+      name: 'Koushik Srivatsan Murali',
+      affiliation: 'Adobe / Johns Hopkins University',
+    },
+    {
+      name: 'Christian Riess',
+      affiliation:
+        'Friedrich-Alexander University Erlangen-Nürnberg, Germany',
+    },
+    { name: 'Davide Cozzolino', affiliation: 'University of Naples Federico II' },
+    { name: 'Roberto Caldelli', affiliation: 'CNIT and Universitas Mercatorum' },
+    { name: 'Benedikt Lorch', affiliation: 'GetReal Security' },
+    {
+      name: 'Chandrakanth Gudavalli',
+      affiliation: 'University of California Santa Barbara',
+    },
+    { name: 'Seonwook Park', affiliation: 'NVIDIA' },
+    { name: 'Amrita Mazumdar', affiliation: 'NVIDIA' },
+    { name: 'Gautham Koorma', affiliation: 'Quandary Peak Research' },
+    { name: 'Arun George Zachariah', affiliation: 'NVIDIA' },
+    {
+      name: 'Gianni Poggi',
+      affiliation: 'Università Federico II di Napoli, Italy',
+    },
+    { name: 'Qiuyu Tang', affiliation: 'Lehigh University' },
+    { name: 'Candice Gerstner', affiliation: 'U.S. Department of Defense' },
+    { name: 'Davide Salvi', affiliation: 'Politecnico di Milano' },
+  ] as Person[],
 };
 
 export interface ScheduleItem {
@@ -141,7 +217,7 @@ export const schedule: ScheduleItem[] = [
   {
     time: '08:40 – 09:30',
     title: 'Keynote: Prof. Hany Farid',
-    detail: 'UC Berkeley / GetReal Security (confirmed)',
+    detail: 'UC Berkeley / GetReal Security',
   },
   {
     time: '09:30 – 10:15',
@@ -149,14 +225,21 @@ export const schedule: ScheduleItem[] = [
     detail: '3 talks, 15 min each',
   },
   { time: '10:15 – 10:45', title: 'Coffee break and poster set-up' },
-  { time: '10:45 – 11:35', title: 'Keynote 2', tba: true },
+  {
+    time: '10:45 – 11:35',
+    title: 'Keynote: Alex Engler',
+    detail: 'Penn Center on Media, Technology, and Democracy',
+  },
   { time: '11:35 – 12:20', title: 'Fast-forward talks for poster authors' },
   {
     time: '12:20 – 13:30',
-    title: 'Working lunch and poster session',
-    detail: 'Sponsored (to be confirmed)',
+    title: 'Sponsored working lunch and poster session',
   },
-  { time: '13:30 – 14:20', title: 'Keynote 3', tba: true },
+  {
+    time: '13:30 – 14:20',
+    title: 'Keynote: Prof. Shawn Shan',
+    detail: 'Dartmouth',
+  },
   {
     time: '14:20 – 15:00',
     title: 'Spotlight Paper Session II',

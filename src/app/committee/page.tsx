@@ -30,10 +30,62 @@ export default function CommitteePage() {
         <h2 className="text-sm font-bold text-neutral-900 uppercase tracking-wide mb-6">
           Program Committee
         </h2>
-        <p className="text-base text-neutral-700 leading-relaxed mb-3">
+        <p className="text-base text-neutral-700 leading-relaxed mb-6">
           {programCommittee.description}
         </p>
-        <p className="text-sm text-neutral-500 italic">
+
+        {/* Self-nomination button */}
+        <div className="mb-10">
+          <a
+            href={programCommittee.nominateUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 font-ui text-sm font-semibold text-white bg-primary-600 hover:bg-primary-700 transition-colors px-5 py-3"
+          >
+            Self-nominate to review
+            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+            </svg>
+          </a>
+          <p className="text-xs font-ui text-neutral-400 mt-2">
+            Interested in reviewing? We welcome self-nominations to join the
+            Program Committee.
+          </p>
+        </div>
+
+        <ul className="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-5">
+          {programCommittee.members.map((person) => (
+            <li key={person.name}>
+              <p className="font-bold text-neutral-900 leading-tight">
+                {person.name}
+              </p>
+              {person.affiliation && (
+                <p className="text-sm text-neutral-500 mt-0.5">
+                  {person.affiliation}
+                </p>
+              )}
+            </li>
+          ))}
+        </ul>
+
+        {/* The organizing committee also serves on the Program Committee. */}
+        <h3 className="text-xs font-semibold text-neutral-400 uppercase tracking-wide mt-10 mb-5">
+          Organizing committee
+        </h3>
+        <ul className="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-5">
+          {organizers.map((person) => (
+            <li key={person.name}>
+              <p className="font-bold text-neutral-900 leading-tight">
+                {person.name}
+              </p>
+              <p className="text-sm text-neutral-500 mt-0.5">
+                {person.affiliation}
+              </p>
+            </li>
+          ))}
+        </ul>
+
+        <p className="text-sm text-neutral-500 italic mt-10">
           {programCommittee.note}
         </p>
       </section>

@@ -3,6 +3,7 @@ import Avatar from '@/components/Avatar';
 import {
   workshop,
   keynoteSpeakers,
+  panelists,
   organizers,
 } from '@/lib/data';
 
@@ -69,7 +70,11 @@ export default function HomePage() {
               <Avatar name={speaker.name} src={speaker.photo} size={96} className="rounded-full" />
               <h3 className="font-bold text-neutral-900 mt-3">{speaker.name}</h3>
               <p className="text-sm text-neutral-500">{speaker.affiliation}</p>
-              {speaker.confirmed ? (
+              {speaker.status ? (
+                <span className="font-ui text-[0.625rem] font-semibold uppercase tracking-wide text-neutral-400 mt-1">
+                  {speaker.status}
+                </span>
+              ) : speaker.confirmed ? (
                 <span className="font-ui text-[0.625rem] font-semibold uppercase tracking-wide text-primary-700 mt-1">
                   Confirmed
                 </span>
@@ -78,6 +83,44 @@ export default function HomePage() {
                   To be announced
                 </span>
               )}
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* Panelists teaser */}
+      <section className="mb-16">
+        <div className="flex items-center justify-between mb-2">
+          <h2 className="text-sm font-bold text-neutral-900 uppercase tracking-wide">
+            Panelists
+          </h2>
+          <Link
+            href="/schedule"
+            className="text-sm text-neutral-500 hover:text-neutral-900 transition-colors"
+          >
+            Full schedule →
+          </Link>
+        </div>
+        <p className="text-sm text-neutral-500 mb-6">
+          The keynote speakers also join the panel.
+        </p>
+        <div className="grid grid-cols-2 sm:grid-cols-4 gap-x-4 gap-y-6">
+          {panelists.map((person) => (
+            <div key={person.name} className="flex flex-col items-center text-center">
+              <Avatar name={person.name} src={person.photo} size={80} className="rounded-full" />
+              <h3 className="text-sm font-bold text-neutral-900 mt-2.5 leading-tight">
+                {person.name}
+              </h3>
+              <p className="text-xs text-neutral-500 mt-0.5">{person.affiliation}</p>
+              {person.status ? (
+                <span className="font-ui text-[0.625rem] font-semibold uppercase tracking-wide text-neutral-400 mt-1">
+                  {person.status}
+                </span>
+              ) : person.role ? (
+                <span className="font-ui text-[0.625rem] font-semibold uppercase tracking-wide text-primary-700 mt-1">
+                  {person.role}
+                </span>
+              ) : null}
             </div>
           ))}
         </div>
