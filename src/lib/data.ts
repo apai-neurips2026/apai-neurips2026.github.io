@@ -52,8 +52,8 @@ export interface Person {
 export const keynoteSpeakers: Person[] = [
   {
     name: 'Hany Farid',
-    affiliation: 'UC Berkeley · GetReal Security',
-    bio: 'Professor at the School of Information and EECS, UC Berkeley, and Co-founder & CSO at GetReal Security. A pioneer of scalable media forensics.',
+    affiliation: 'UC Berkeley · GRL',
+    bio: 'Professor at the School of Information and EECS, UC Berkeley, and Co-founder & CSO at GRL. A pioneer of scalable media forensics.',
     confirmed: true,
     photo: '/images/farid.jpg',
   },
@@ -216,7 +216,7 @@ export const schedule: ScheduleItem[] = [
   {
     time: '08:40 – 09:30',
     title: 'Keynote: Prof. Hany Farid',
-    detail: 'UC Berkeley / GetReal Security',
+    detail: 'UC Berkeley / GRL',
   },
   {
     time: '09:30 – 10:15',
