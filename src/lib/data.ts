@@ -53,22 +53,19 @@ export const keynoteSpeakers: Person[] = [
   {
     name: 'Hany Farid',
     affiliation: 'UC Berkeley · GetReal Security',
-    role: 'Keynote',
     bio: 'Professor at the School of Information and EECS, UC Berkeley, and Co-founder & CSO at GetReal Security. A pioneer of scalable media forensics.',
     confirmed: true,
     photo: '/images/farid.jpg',
   },
   {
     name: 'Alex Engler',
-    affiliation: 'Penn Center on Media, Technology, and Democracy',
-    role: 'Keynote',
-    bio: 'Executive Director of the Penn Center on Media, Technology, and Democracy, and former Senior Policy Advisor at the White House OSTP. Works on AI governance and algorithmic accountability.',
+    affiliation: 'Penn MEDIATED',
+    bio: 'Executive Director of Penn MEDIATED, and former Senior Policy Advisor at the White House OSTP. Works on AI governance and algorithmic accountability.',
     confirmed: true,
   },
   {
     name: 'Shawn Shan',
     affiliation: 'Dartmouth',
-    role: 'Keynote',
     bio: 'Professor at Dartmouth working on creator protection against generative mimicry.',
     confirmed: true,
   },
@@ -80,14 +77,12 @@ export const panelists: Person[] = [
   {
     name: 'Nicholas Carlini',
     affiliation: 'Anthropic',
-    role: 'Panelist',
     bio: 'Researcher at Anthropic working on adversarial robustness and model red-teaming.',
     status: 'Tentative',
   },
   {
     name: 'Chris Bregler',
     affiliation: 'Google DeepMind',
-    role: 'Panelist',
     bio: 'Researcher at Google DeepMind working on generative video and deep synthesis.',
     confirmed: true,
     status: 'Pending Location',
@@ -95,7 +90,6 @@ export const panelists: Person[] = [
   {
     name: 'Luisa Verdoliva',
     affiliation: 'University Federico II of Naples',
-    role: 'Panelist',
     bio: 'Professor at the University Federico II of Naples, focused on benchmarking synthetic-media forensics methods.',
     status: 'Pending Location',
   },
@@ -228,7 +222,7 @@ export const schedule: ScheduleItem[] = [
   {
     time: '10:45 – 11:35',
     title: 'Keynote: Alex Engler',
-    detail: 'Penn Center on Media, Technology, and Democracy',
+    detail: 'Penn MEDIATED',
   },
   { time: '11:35 – 12:20', title: 'Fast-forward talks for poster authors' },
   {
