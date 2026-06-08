@@ -60,9 +60,9 @@ export const keynoteSpeakers: Person[] = [
   },
   {
     name: 'Alex Engler',
-    affiliation: 'University of Pennsylvania',
+    affiliation: 'Penn Center on Media, Technology, and Democracy',
     role: 'Keynote',
-    bio: 'Executive Director of the Center on Media, Technology and Democracy at Penn, and former Senior Policy Advisor at the White House OSTP. Works on AI governance and algorithmic accountability.',
+    bio: 'Executive Director of the Penn Center on Media, Technology, and Democracy, and former Senior Policy Advisor at the White House OSTP. Works on AI governance and algorithmic accountability.',
     confirmed: true,
   },
   {
@@ -82,7 +82,7 @@ export const panelists: Person[] = [
     affiliation: 'Anthropic',
     role: 'Panelist',
     bio: 'Researcher at Anthropic working on adversarial robustness and model red-teaming.',
-    status: 'Pending Location Logistics',
+    status: 'Tentative',
   },
   {
     name: 'Chris Bregler',
@@ -90,6 +90,7 @@ export const panelists: Person[] = [
     role: 'Panelist',
     bio: 'Researcher at Google DeepMind working on generative video and deep synthesis.',
     confirmed: true,
+    status: 'Pending Location',
   },
   {
     name: 'Luisa Verdoliva',
@@ -200,7 +201,7 @@ export const programCommittee = {
     },
     { name: 'Qiuyu Tang', affiliation: 'Lehigh University' },
     { name: 'Candice Gerstner', affiliation: 'U.S. Department of Defense' },
-    { name: 'Davide Salvi', affiliation: '' },
+    { name: 'Davide Salvi', affiliation: 'Politecnico di Milano' },
   ] as Person[],
 };
 
@@ -216,7 +217,7 @@ export const schedule: ScheduleItem[] = [
   {
     time: '08:40 – 09:30',
     title: 'Keynote: Prof. Hany Farid',
-    detail: 'UC Berkeley / GetReal Security (confirmed)',
+    detail: 'UC Berkeley / GetReal Security',
   },
   {
     time: '09:30 – 10:15',
@@ -227,18 +228,17 @@ export const schedule: ScheduleItem[] = [
   {
     time: '10:45 – 11:35',
     title: 'Keynote: Alex Engler',
-    detail: 'University of Pennsylvania (confirmed)',
+    detail: 'Penn Center on Media, Technology, and Democracy',
   },
   { time: '11:35 – 12:20', title: 'Fast-forward talks for poster authors' },
   {
     time: '12:20 – 13:30',
-    title: 'Working lunch and poster session',
-    detail: 'Sponsored (to be confirmed)',
+    title: 'Sponsored working lunch and poster session',
   },
   {
     time: '13:30 – 14:20',
     title: 'Keynote: Prof. Shawn Shan',
-    detail: 'Dartmouth (confirmed)',
+    detail: 'Dartmouth',
   },
   {
     time: '14:20 – 15:00',
