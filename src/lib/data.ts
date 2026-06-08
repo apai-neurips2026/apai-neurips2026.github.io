@@ -60,12 +60,14 @@ export const keynoteSpeakers: Person[] = [
   {
     name: 'Alex Engler',
     affiliation: 'Penn MEDIATED',
+    photo: '/images/engler.jpg',
     bio: 'Executive Director of Penn MEDIATED, and former Senior Policy Advisor at the White House OSTP. Works on AI governance and algorithmic accountability.',
     confirmed: true,
   },
   {
     name: 'Shawn Shan',
     affiliation: 'Dartmouth',
+    photo: '/images/shan.jpg',
     bio: 'Professor at Dartmouth working on creator protection against generative mimicry.',
     confirmed: true,
   },
@@ -77,12 +79,14 @@ export const panelists: Person[] = [
   {
     name: 'Nicholas Carlini',
     affiliation: 'Anthropic',
+    photo: '/images/carlini.jpg',
     bio: 'Researcher at Anthropic working on adversarial robustness and model red-teaming.',
     status: 'Tentative',
   },
   {
     name: 'Chris Bregler',
     affiliation: 'Google DeepMind',
+    photo: '/images/bregler.jpg',
     bio: 'Researcher at Google DeepMind working on generative video and deep synthesis.',
     confirmed: true,
     status: 'Pending Location',
@@ -90,6 +94,7 @@ export const panelists: Person[] = [
   {
     name: 'Luisa Verdoliva',
     affiliation: 'University of Naples',
+    photo: '/images/verdoliva.jpg',
     bio: 'Professor at the University of Naples, focused on benchmarking synthetic-media forensics methods.',
     status: 'Pending Location',
   },
