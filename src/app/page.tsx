@@ -70,7 +70,7 @@ export default function HomePage() {
 
       {/* Panelists teaser */}
       <section className="mb-16">
-        <div className="flex items-center justify-between mb-2">
+        <div className="flex items-center justify-between mb-6">
           <h2 className="text-sm font-bold text-neutral-900 uppercase tracking-wide">
             Panelists
           </h2>
@@ -81,9 +81,6 @@ export default function HomePage() {
             Full schedule →
           </Link>
         </div>
-        <p className="text-sm text-neutral-500 mb-6">
-          The keynote speakers also join the panel.
-        </p>
         <PersonGrid people={panelists} size={72} />
       </section>
 

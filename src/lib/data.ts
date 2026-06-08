@@ -89,8 +89,8 @@ export const panelists: Person[] = [
   },
   {
     name: 'Luisa Verdoliva',
-    affiliation: 'University Federico II of Naples',
-    bio: 'Professor at the University Federico II of Naples, focused on benchmarking synthetic-media forensics methods.',
+    affiliation: 'University of Naples',
+    bio: 'Professor at the University of Naples, focused on benchmarking synthetic-media forensics methods.',
     status: 'Pending Location',
   },
   {
@@ -207,7 +207,7 @@ export interface ScheduleItem {
 }
 
 export const schedule: ScheduleItem[] = [
-  { time: '08:30 – 08:40', title: 'Opening remarks and framing' },
+  { time: '08:30 – 08:40', title: 'Opening remarks' },
   {
     time: '08:40 – 09:30',
     title: 'Keynote: Prof. Hany Farid',
