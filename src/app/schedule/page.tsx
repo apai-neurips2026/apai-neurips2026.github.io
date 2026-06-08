@@ -42,9 +42,6 @@ export default function SchedulePage() {
             </div>
           ))}
         </div>
-        <p className="text-xs font-ui text-neutral-400 mt-3">
-          Schedule is tentative and subject to change.
-        </p>
       </section>
 
       {/* Keynote Speakers */}
