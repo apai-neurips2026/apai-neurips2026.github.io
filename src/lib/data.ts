@@ -52,8 +52,8 @@ export interface Person {
 export const keynoteSpeakers: Person[] = [
   {
     name: 'Hany Farid',
-    affiliation: 'UC Berkeley · GRL',
-    bio: 'Professor at the School of Information and EECS, UC Berkeley, and Co-founder & CSO at GRL. A pioneer of scalable media forensics.',
+    affiliation: 'UC Berkeley · GetReal Security',
+    bio: 'Professor at the School of Information and EECS, UC Berkeley, and Co-founder & CSO at GetReal Security. A pioneer of scalable media forensics.',
     confirmed: true,
     photo: '/images/farid.jpg',
   },
@@ -136,25 +136,25 @@ export const organizers: Person[] = [
   {
     name: 'Michael Davinroy',
     affiliation: 'Aptima Inc.',
-    bio: 'Researcher at Aptima Inc., bringing a test-and-evaluation perspective to authenticity and provenance.',
+    bio: 'Senior AI/ML Engineer at Aptima Inc.; led the transition of the DARPA SemaFor program to industry, government, and international law enforcement.',
     photo: '/images/davinroy.jpg',
   },
   {
     name: 'Matthew Stamm',
     affiliation: 'Drexel University',
-    bio: 'Associate Professor; director of the Multimedia and Information Security Lab (MISL). Developed the constrained-CNN family of forensic detectors and the VideoFACT line of video-forgery detectors.',
+    bio: 'Professor; director of the Multimedia and Information Security Lab (MISL). Developed the constrained-CNN family of forensic detectors and the VideoFACT line of video-forgery detectors.',
     photo: '/images/stamm.jpg',
   },
   {
     name: 'David Luebke',
     affiliation: 'NVIDIA',
-    bio: 'VP, Graphics Research at NVIDIA Research. Co-author on the original avatar fingerprinting paper, bringing deep ties to the rendering and generation side of the problem.',
+    bio: 'VP, Graphics Research at NVIDIA Research. Co-author on the original avatar fingerprinting paper and on the puppeteering-defense follow-on, bringing deep ties to the rendering and generation side of the problem.',
     photo: '/images/luebke.jpg',
   },
   {
     name: 'Jill Crisman',
     affiliation: 'UL Research Institutes',
-    bio: 'Executive Director at UL Research Institutes, bringing standards and applied-research expertise to the organizing team.',
+    bio: 'VP and Executive Director of the Digital Safety Research Institute (DSRI) at UL Research Institutes.',
     photo: '/images/crisman.jpg',
   },
 ];
@@ -163,7 +163,7 @@ export const organizers: Person[] = [
 // serves on the panel. Additional members are added as invitations confirm.
 export const programCommittee = {
   description:
-    'We are assembling a Program Committee of approximately 40 reviewers drawn from (i) the Content Authenticity Initiative and C2PA technical working groups; (ii) authors of recent provenance-and-attribution papers at NeurIPS, CVPR, ICCV, and ICLR; and (iii) prior reviewer pools from APAI at ICCV 2025 and CVPR 2026. No reviewer will be assigned more than 3 papers.',
+    'We are assembling a Program Committee of approximately 60 reviewers drawn from (i) the Content Authenticity Initiative and C2PA technical working groups; (ii) authors of recent provenance-and-attribution papers at NeurIPS, CVPR, ICCV, and ICLR; and (iii) prior reviewer pools from APAI at ICCV 2025 and CVPR 2026. No reviewer will be assigned more than 3 papers.',
   note: 'Additional reviewers will be listed here as invitations are confirmed.',
   nominateUrl: 'https://forms.gle/9PP5YMHho8JA8zPm9',
   members: [
@@ -216,7 +216,7 @@ export const schedule: ScheduleItem[] = [
   {
     time: '08:40 – 09:30',
     title: 'Keynote: Prof. Hany Farid',
-    detail: 'UC Berkeley / GRL',
+    detail: 'UC Berkeley / GetReal Security',
   },
   {
     time: '09:30 – 10:15',
@@ -272,7 +272,7 @@ export const cfp = {
     { label: 'Workshop date', value: 'December 2026' },
   ],
   details: [
-    'We solicit short (4–6 page) workshop papers and extended abstracts through OpenReview, with double-blind reviewing.',
+    'We solicit standard 8-page workshop papers through OpenReview, with double-blind reviewing.',
     'Each paper receives 3 reviews and no reviewer is assigned more than 3 papers. We anticipate accepting roughly 50% of submissions, with around 6 selected for spotlight presentation and the remainder for posters with fast-forward talks.',
     'This workshop is non-archival. Work already accepted at a main machine-learning conference (including NeurIPS 2026) is out of scope.',
   ],
