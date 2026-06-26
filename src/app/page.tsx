@@ -127,9 +127,8 @@ export default function HomePage() {
               </h3>
             </div>
             <p className="text-sm text-neutral-600 leading-relaxed flex-1">
-              Submit short papers and extended abstracts on authenticity,
-              provenance, and authorized use of generative AI. Double-blind,
-              non-archival.
+              Submit 8-page papers on authenticity, provenance, and authorized
+              use of generative AI. Double-blind, non-archival.
             </p>
             <span className="font-ui text-sm font-medium text-primary-600 group-hover:text-primary-700 mt-4 inline-flex items-center gap-1">
               Read the call
@@ -148,8 +147,9 @@ export default function HomePage() {
               </h3>
             </div>
             <p className="text-sm text-neutral-600 leading-relaxed flex-1">
-              An outstanding accepted submission will receive a Best Paper
-              Award, announced during the closing remarks of the workshop.
+              Sponsored by NVIDIA, the Best Paper Award includes a DGX Spark
+              for the winning paper, plus two honorable mentions. Winners are
+              announced during the closing remarks of the workshop.
             </p>
           </div>
         </div>
