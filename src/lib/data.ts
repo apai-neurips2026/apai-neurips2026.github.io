@@ -215,7 +215,7 @@ export const schedule: ScheduleItem[] = [
   { time: '08:30 – 08:40', title: 'Opening remarks' },
   {
     time: '08:40 – 09:30',
-    title: 'Keynote: Prof. Hany Farid',
+    title: 'Keynote: Hany Farid',
     detail: 'UC Berkeley / GetReal Security',
   },
   {
@@ -236,7 +236,7 @@ export const schedule: ScheduleItem[] = [
   },
   {
     time: '13:30 – 14:20',
-    title: 'Keynote: Prof. Shawn Shan',
+    title: 'Keynote: Shawn Shan',
     detail: 'Dartmouth',
   },
   {
